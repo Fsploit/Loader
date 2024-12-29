@@ -1,1 +1,43 @@
-a
+local free_users_access = true
+
+local loader_url = {
+    Loader = "https://Testlink",
+    Backup_loader = "https://Testlink2"
+}
+
+local function executeLoadstring(url)
+    local success, result = pcall(function()
+        return loadstring(game:HttpGet(url))()
+    end)
+    
+    if not success then
+        if tostring(result):find("404") or tostring(result):find("beam") or tostring(result):find("attempt to index nil") then
+            return false, result
+        end
+    end
+    
+    return success, result
+end
+
+if not free_users_access then
+    game:GetService("Players").LocalPlayer:Kick("Access denied. Please contact us at https://discord.gg/GetFrost for further assistance.")
+else
+    local success, result = executeLoadstring(loader_url.Loader)
+
+    if not success then
+        warn("[⚠️] Loader failed with error: " .. tostring(result))
+        local fallback_success, fallback_result = executeLoadstring(loader_url.Backup_loader)
+        
+        if not fallback_success then
+            warn("[⚠️] Backup_loader also failed with error: " .. tostring(fallback_result))
+            game:GetService("Players").LocalPlayer:Kick(
+                "Both modules are down, please contact us in https://discord.gg/GetFrost immediately when upon seeing this text."
+            )
+        else
+            print("[✅] Backup loader executed successfully.")
+        end
+    else
+        print("[✅] Loader executed successfully.")
+    end
+end
+
