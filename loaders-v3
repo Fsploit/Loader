@@ -1,8 +1,8 @@
 local free_users_access = true
 
 local loader_url = {
-    Loader = "https://Testlink",
-    Backup_loader = "https://Testlink2"
+    Loader = "https://pastebin.com/raw/HHQCqhG9",
+    Backup_loader = "https://pastebin.com/raw/q4vpvCk3"
 }
 
 local function executeLoadstring(url)
