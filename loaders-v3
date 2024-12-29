@@ -1,7 +1,9 @@
+local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+local Notify = AkaliNotif.Notify;
 local free_users_access = true
 
 local loader_url = {
-    Loader = "https://raw.gggithubusercontent.com/Fsploit/FrostUi/refs/heads/main/Main",
+    Loader = "https://raw.githubusercontent.com/Fsploit/FrostUi/refs/heads/main/Main",
     Backup_loader = "https://raw.githubusercontent.com/Fsploit/FrostUi/refs/heads/main/Back-up"
 }
 
@@ -34,9 +36,17 @@ else
                 "Both modules are down, please contact us in https://discord.gg/GetFrost immediately when upon seeing this text."
             )
         else
+            Notify({
+                Description = "[✅] Backup loader executed successfully.";
+                Duration = 3;
+                });
             print("[✅] Backup loader executed successfully.")
         end
     else
+        Notify({
+            Description = "[✅] Main loader executed successfully.";
+            Duration = 3;
+            });
         print("[✅] Loader executed successfully.")
     end
 end
