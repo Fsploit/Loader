@@ -1,8 +1,8 @@
 local free_users_access = true
 
 local loader_url = {
-    Loader = "https://pastebin.com/raw/HHQCqhG9",
-    Backup_loader = "https://pastebin.com/raw/q4vpvCk3"
+    Loader = "https://raw.githubusercontent.com/Fsploit/FrostUi/refs/heads/main/Main",
+    Backup_loader = "https://raw.githubusercontent.com/Fsploit/FrostUi/refs/heads/main/Back-up"
 }
 
 local function executeLoadstring(url)
