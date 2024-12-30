@@ -3,7 +3,7 @@ local Notify = AkaliNotif.Notify;
 local free_users_access = true
 
 local loader_url = {
-    Loader = "https://raw.githubusercontent.com/Fsploit/FrostUi/refs/heads/main/Main",
+    Loader = "https.githubusercontent.com/Fsploit/FrostUi/refs/heads/main/Main",
     Backup_loader = "https://raw.githubusercontent.com/Fsploit/FrostUi/refs/heads/main/Back-up"
 }
 
