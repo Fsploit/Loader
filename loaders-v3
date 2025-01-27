@@ -32,9 +32,6 @@ else
         
         if not fallback_success then
             warn("[⚠️] Backup_loader also failed with error: " .. tostring(fallback_result))
-            game:GetService("Players").LocalPlayer:Kick(
-                "Both modules are down, please contact us in https://discord.gg/GetFrost immediately when upon seeing this text."
-            )
         else
             Notify({
                 Description = "[✅] Backup loader executed successfully.";
